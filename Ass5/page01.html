@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>assignment</title>
+    </head>
+        <body>
+            <script>
+                let value1 = window.prompt("enter the first number")
+                value1 = Number(value1);
+                while(isNaN(value1) || value1 <= 0){
+                    value1 = window.prompt("Please enter valid positive number")
+                    value1 = Number(value1)
+                }
+                let value2 = window.prompt("enter the second number")
+                value2 = Number(value2);
+                while(isNaN(value2) || value2 <= 0){
+                    value2 = window.prompt("Please enter valid positive number")
+                    value2 = Number(value2)
+                }
+                let value3 = window.prompt("enter the third number")
+                value3 = Number(value3);
+                while(isNaN(value3) || value3 <= 0){
+                    value3 = window.prompt("Please enter valid positive number")
+                    value3 = Number(value3)
+                }
+                let largestNumber = Math.max(value1,value2,value3)
+                alert("the largest number is: " +largestNumber)
+                
+            </script>
+        </body>
+</html>

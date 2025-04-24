@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Print message no. of times</title>
+</head>
+    <body>
+        <script>
+            let num = window.prompt("enter the number of times to print the message")
+            num = Number(num)
+            while(isNaN(num) || num<=0){
+                num = window.prompt("Please enter a valid positive integer!")
+                num = Number(num)
+            }
+            let str = window.prompt("Enter the message")
+            console.log("Repeated Message:")
+            for(let i = 1; i<=num; i++){
+                console.log(i+". "+str)
+            }
+        </script>
+    </body>
+
+</html>

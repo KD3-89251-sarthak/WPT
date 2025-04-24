@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter a number (n):"));
+
+        if (isNaN(n) || n <= 0) {
+            alert("Please enter a valid positive integer!");
+        } else {
+            let evenNumbers = [];
+
+            let i = 1;
+            while (i <= n) {
+                if (i % 2 === 0) {
+                    evenNumbers.push(i);
+                }
+                i++;
+            }
+
+            let j = 0;
+            console.log(`Even numbers ≤ ${n}:`);
+            while (j < evenNumbers.length) {
+                console.log(evenNumbers[j]);
+                j++;
+            }
+        }
+    </script>
+</body>
+</html>
