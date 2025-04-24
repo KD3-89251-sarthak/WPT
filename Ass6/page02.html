@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplaySort</title>
+</head>
+<body>
+    <h1>Enter Employee Names</h1>
+    <div>
+        <input type="text" id="name" placeholder="Enter employee name">
+        <button onclick="add()">Add Name</button>
+        <button onclick="sort()">Sort & Display</button>
+    </div>
+    <h2>Sorted Employee Names : </h2>
+    <ul id="sortedList">
+
+    </ul>
+
+    <script>
+        let list = []
+
+        function add() {
+            let name = document.getElementById("name").value
+            list.push(name)
+            alert("Employee added ...")
+        }
+        
+        function sort() {
+            let sortedList = document.getElementById("sortedList")
+            sortedList.innerText = ""
+            list.sort()
+            for(let ele of list) {
+                let li = `
+                    <li>${ele}</li>
+                `
+                sortedList.innerHTML += li
+            }
+        }
+    </script>
+</body>
+</html>

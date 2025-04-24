@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title >Calculator</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            margin: 20px auto;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"] {
+            width: 150px;
+        }
+
+        input[type="button"] {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <table border="1">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-6">
+                <h1 class="center">Calculator</h1>
+
+                <div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="num1">
+                                        Enter Number 1
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="num1" placeholder="Enter number 1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="num2">
+                                        Enter Number 2
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="num2" placeholder="Enter number 2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Result
+                                </td>
+                                <td id="result">
+                                    0
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="d-flex justify-content-center gap-5">
+                                        <button onclick="add()" class="btn btn-success">Addition</button>
+                                        <button onclick="sub()" class="btn btn-danger">Substraction</button>
+                                        <button onclick="mul()" class="btn btn-primary">Multiplication</button>
+                                        <button onclick="div()" class="btn btn-secondary">Division</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div>
+    </table>
+
+        <script>
+            let num1, num2, result
+ 
+            function getElements() {
+                num1 = document.getElementById("num1").value
+                num2 = document.getElementById("num2").value
+                result = document.getElementById("result")
+            }
+
+            function add() {
+                getElements()
+                let totalResult = parseInt(num1) + parseInt(num2)
+                result.innerText = totalResult
+            }
+
+            function sub() {
+                getElements()
+                let totalResult = parseInt(num1) - parseInt(num2)
+                result.innerText = totalResult
+            }
+
+            function mul() {
+                getElements()
+                let totalResult = parseInt(num1) * parseInt(num2)
+                result.innerText = totalResult
+            }
+
+            function div() {
+                getElements()
+                let totalResult = parseInt(num1) / parseInt(num2)
+                result.innerText = totalResult
+            }
+
+        </script>
+    </div>
+</body>
+</html>
